@@ -1,8 +1,8 @@
 # bashpipe
 
 This small experiment maintains a long-lived bash process used to
-execute system commands. The objective is not having to spawn a
-process for every call like clojure.java.shell.
+execute system commands. Somehow, it is significantly faster than
+clojure.java.shell/sh.
 
 ## Installation
 
