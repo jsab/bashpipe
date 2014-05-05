@@ -4,9 +4,17 @@ This small experiment maintains a long-lived bash process used to
 execute system commands. The objective is not having to spawn a
 process for every call like clojure.java.shell.
 
-## Usage
+## Installation
+
+Add the following dependency to your `project.clj` file:
 
 ```
+[bashpipe "0.1.0-SNAPSHOT"]
+```
+
+## Usage
+
+```clojure
 (bashpipe.core/sh "ls" "-la")
 ```
 
