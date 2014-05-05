@@ -1,12 +1,20 @@
 # bashpipe
 
-A this point, only a small experiment using a long lived shell process
-to execute stuff faster than spawning a different process everytime
-with clojure.java.shell/sh.
+This small experiment maintains a long-lived bash process used to
+execute system commands. The objective is not having to spawn a
+process for every call like clojure.java.shell.
 
 ## Usage
 
-FIXME
+```
+(bashpipe.core/sh "ls" "-la")
+```
+
+## Issues
+
+Having a single bash process means that commands are executed sequentially and that if one command hangs, it will block all other commands.
+
+A named pipe is created in the mechanism of communication with the bash process. That named pipe is never removed.
 
 ## License
 
